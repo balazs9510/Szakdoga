@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<p:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:p="clr-namespace:WorkoutPlaner.Views"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:templates="clr-namespace:WorkoutPlaner.Views.Templates"
+             xmlns:i18n="clr-namespace:WorkoutPlaner.Helpers"
+             x:Class="WorkoutPlaner.Views.WorkoutsPage">
+    <p:BasePage.Content>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ListView Grid.Row="1" 
+                      SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                      IsVisible="{Binding Workouts.Count, Converter={StaticResource IntToBoolConverter}}"
+                      ItemsSource="{Binding Workouts}" 
+                      Grid.ColumnSpan="2"
+                      SeparatorVisibility="None">
+                <ListView.RowHeight>
+                    <OnPlatform
+                            x:TypeArguments="x:Int32"
+                            Android="110"/>
+                </ListView.RowHeight>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <templates:WorkoutTemplate/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <BoxView
+                IsVisible="{Binding Workouts.Count,Converter={StaticResource InverseIntToBoolConverter}}"
+                Grid.Row="1" Grid.ColumnSpan="2" Opacity="0.1"
+                     Color="{StaticResource BlackColor}"
+                     HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <Label  
+                IsVisible="{Binding Workouts.Count,Converter={StaticResource InverseIntToBoolConverter}}"
+                Grid.Row="1" Grid.ColumnSpan="2"
+                VerticalOptions="StartAndExpand"
+                Margin="14"
+                Text="{i18n:Translate Text=NoWorkoutAdded}" 
+                FontSize="Medium" TextColor="{StaticResource BlackColor}"/>
+            <Image x:Name="AddBtn" Grid.Row="0" Grid.Column="0"
+                   Margin="5"
+                   Aspect="AspectFit">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding CreateWorkoutCommand}"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Grid.Row="0" Grid.Column="1" 
+                   VerticalOptions="CenterAndExpand"
+                   Text="{i18n:Translate Text=AddWorkout}" 
+                   FontSize="Medium" TextColor="{StaticResource BlackColor}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding CreateWorkoutCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+    </p:BasePage.Content>
+</p:BasePage>

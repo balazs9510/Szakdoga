@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<page:MenuContainerPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:beh_prism="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             xmlns:i18n="clr-namespace:WorkoutPlaner.Helpers"
+             NavigationPage.HasBackButton="True"
+             xmlns:page="clr-namespace:SlideOverKit;assembly=SlideOverKit"
+             Title="{i18n:Translate Text=CreateNewWorkout}"
+             x:Name="CreatePage"
+             x:Class="WorkoutPlaner.Views.CreateWorkoutPage">
+    <page:MenuContainerPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ThreeLineStack" TargetType="{x:Type StackLayout}">
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="Spacing" Value="2"/>
+                <Setter Property="Margin" Value="5,5"/>
+            </Style>
+        </ResourceDictionary>
+    </page:MenuContainerPage.Resources>
+    <page:MenuContainerPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+            <StackLayout Style="{StaticResource ThreeLineStack}">
+                <Label Text="{i18n:Translate Text=WorkoutName}">
+                    <Label.Style>
+                        <OnPlatform x:TypeArguments="Style"
+                                    Android="{StaticResource DefaultLabelStyle}"
+                                    WinPhone="{StaticResource DefaultLabelStyleWinPhone}"/>
+                    </Label.Style>
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                        Android="20"
+                                        WinPhone="14"/>
+                    </Label.FontSize>
+                </Label>
+                <Entry Style="{StaticResource EntryStyle}" 
+                               Text="{Binding NewWorkout.ValidName.Value}" Placeholder="{i18n:Translate Text=WorkoutNamePlaceHolder}" 
+                   Keyboard="Email">
+                    <Entry.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                        Android="20"
+                                        WinPhone="14"/>
+                    </Entry.FontSize>
+                    <Entry.Behaviors>
+                        <beh_prism:EventToCommandBehavior 
+                                    EventName="TextChanged"
+                                    Command="{Binding ValidateWorkoutNameCommand}">
+                        </beh_prism:EventToCommandBehavior>
+                    </Entry.Behaviors>
+                </Entry>
+                <Label Style="{StaticResource ValidationErrorLabelStyle}"
+                    Text="{Binding NewWorkout.ValidName.Errors,Converter={StaticResource ErrorListToStringConverter}}">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                        Android="20"
+                                        WinPhone="14"/>
+                    </Label.FontSize>
+                </Label>
+            </StackLayout>
+            <Label Text="{i18n:Translate Difficulty}" Style="{StaticResource DefaultLabelStyle}"
+                   Margin="5">
+                
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                                        Android="20"
+                                        WinPhone="14"/>
+                </Label.FontSize>
+            </Label>
+            <Slider Minimum="0" Maximum="5" Value="{Binding NewWorkout.Difficulty}" Margin="5"/>
+            <Label Text="{i18n:Translate AddExercises}" Style="{StaticResource DefaultLabelStyle}"
+                   Margin="5">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                                        Android="20"
+                                        WinPhone="14"/>
+                </Label.FontSize>
+            </Label>
+            <SearchBar
+                     x:Name="searchBar"
+                     Margin="2" Placeholder="{i18n:Translate Search}"
+                     HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                <SearchBar.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                                        Android="20"
+                                        WinPhone="14"/>
+                </SearchBar.FontSize>
+                <SearchBar.Behaviors>
+                    <beh_prism:EventToCommandBehavior 
+                                    EventName="TextChanged"
+                                    EventArgsConverter="{StaticResource TextChangedEventArgsConverter}"
+                                    Command="{Binding SearchCommand}">
+                    </beh_prism:EventToCommandBehavior>
+                </SearchBar.Behaviors>
+            </SearchBar>
+            <ListView
+                VerticalOptions="CenterAndExpand"
+                ItemsSource="{Binding DisplayExercises}"
+                SelectedItem="{Binding SelectedExercise}">
+                <ListView.Footer>
+                    <Label Text="{i18n:Translate NoItem}" 
+                           Style="{StaticResource DefaultLabelStyle}"
+                           IsVisible="{Binding DisplayExercises.Count,Converter={StaticResource InverseIntToBoolConverter}}}"/>
+                </ListView.Footer>
+                <ListView.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double"
+                                    Android="200"
+                                    WinPhone="250"/>
+                </ListView.HeightRequest>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid VerticalOptions="CenterAndExpand" >
+                                <Grid.Padding>
+                                    <OnPlatform x:TypeArguments="Thickness"
+                                        Android="5"
+                                        WinPhone="10"/>
+                                </Grid.Padding>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold"
+                                       Style="{StaticResource DefaultLabelStyle}">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double"
+                                        Android="20"
+                                        WinPhone="14"/>
+                                    </Label.FontSize>
+                                </Label>
+                                <Label Grid.Column="1" Text="{Binding Difficulty, StringFormat='Nehézség : {0:N0}'}" 
+                                       Style="{StaticResource DefaultLabelStyle}">
+                                    <Label.FontSize>
+                                        <OnPlatform x:TypeArguments="x:Double"
+                                        Android="20"
+                                        WinPhone="14"/>
+                                    </Label.FontSize>
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout VerticalOptions="Fill" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="{i18n:Translate AddedExercises}" Style="{StaticResource DefaultLabelStyle}"
+                   VerticalOptions="EndAndExpand"
+                   HorizontalOptions="Center"
+                   BindingContext="{x:Reference CreatePage}"
+                   Margin="5">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                        Android="20"
+                                        WinPhone="14"/>
+                    </Label.FontSize>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding OpenMenuCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Image Source="{i18n:ImageResource Source=up_btn.png}" 
+                       Aspect="AspectFill" 
+                       Margin="2,0,20,0"
+                       BindingContext="{x:Reference CreatePage}"
+                       WidthRequest="20" HeightRequest="20" VerticalOptions="End" HorizontalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding OpenMenuCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Button BackgroundColor="{StaticResource LightGreenColor}" 
+                        Text="{i18n:Translate Save}"
+                        IsVisible="{Binding IsValidModel}"
+                        IsEnabled="{Binding IsValidModel}"
+                        VerticalOptions="End"
+                        HorizontalOptions="EndAndExpand"
+                        TextColor="{StaticResource WhiteColor}"
+                        Command="{Binding SaveCommand}"/>
+            </StackLayout>
+        </StackLayout>
+    </page:MenuContainerPage.Content>
+</page:MenuContainerPage>

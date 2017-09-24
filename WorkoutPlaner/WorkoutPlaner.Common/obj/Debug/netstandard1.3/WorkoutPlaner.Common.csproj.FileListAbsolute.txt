@@ -1,0 +1,7 @@
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.Common\bin\Debug\netstandard1.3\WorkoutPlaner.Common.deps.json
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.Common\bin\Debug\netstandard1.3\WorkoutPlaner.Common.dll
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.Common\bin\Debug\netstandard1.3\WorkoutPlaner.Common.pdb
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.Common\obj\Debug\netstandard1.3\WorkoutPlaner.Common.csprojResolveAssemblyReference.cache
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.Common\obj\Debug\netstandard1.3\WorkoutPlaner.Common.AssemblyInfo.cs
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.Common\obj\Debug\netstandard1.3\WorkoutPlaner.Common.dll
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.Common\obj\Debug\netstandard1.3\WorkoutPlaner.Common.pdb

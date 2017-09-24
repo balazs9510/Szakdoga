@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="musclegroup_array">
+        <item>Alkar</item>
+        <item>Törzsizomzat</item>
+        <item>Vádli</item>
+        <item>Hasizom</item>
+        <item>Tricepsz</item>
+        <item>Bicepsz</item>
+        <item>Combizom</item>
+        <item>Vállizom</item>
+        <item>Hátizom</item>
+        <item>Mellizom</item>
+    </string-array>
+</resources>

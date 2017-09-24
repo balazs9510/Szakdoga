@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<t:SlideMenuView   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:t="clr-namespace:SlideOverKit;assembly=SlideOverKit"
+             xmlns:i18n="clr-namespace:WorkoutPlaner.Helpers"
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+             HeightRequest="200"
+             IsClippedToBounds="True"
+             BackgroundColor="Transparent"
+             BackgroundViewColor="Transparent"
+             x:Class="WorkoutPlaner.Views.Menus.AddToCalendarMenu">
+  <t:SlideMenuView.Content>
+        <Frame VerticalOptions="StartAndExpand" 
+               BackgroundColor="{StaticResource BackgroundColor}"
+               Padding="5"
+               IsClippedToBounds="True"
+               OutlineColor="{StaticResource GrayColor}"
+               HasShadow="True"
+               HeightRequest="5000" CornerRadius="20">
+            <StackLayout Margin="5" HorizontalOptions="CenterAndExpand">
+                <Label Text="{i18n:Translate ChooseDate}" FontSize="Medium">
+                    <Label.Style>
+                        <OnPlatform x:TypeArguments="Style"
+                            Android="{StaticResource DefaultLabelStyle}"
+                            WinPhone="{StaticResource DefaultLabelStyleWinPhone}"/>
+                    </Label.Style>
+                </Label>
+                <DatePicker x:Name="datePicker" Date="{x:Static sys:DateTime.Now}">
+                    <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+                </DatePicker>
+                <Label Text="{i18n:Translate Time}" 
+                           FontSize="Small">
+                    <Label.Style>
+                        <OnPlatform x:TypeArguments="Style"
+                            Android="{StaticResource DefaultLabelStyle}"
+                            WinPhone="{StaticResource DefaultLabelStyleWinPhone}"/>
+                    </Label.Style>
+                </Label>
+                <TimePicker x:Name="timePicker"/>
+                <Button Text="{i18n:Translate Save}"
+                        BackgroundColor="{StaticResource LightGreenColor}"
+                        TextColor="{StaticResource WhiteColor}"
+                        BindingContext="{x:Reference datePicker}" 
+                        Clicked="Button_Clicked"/>
+            </StackLayout>
+        </Frame> 
+    </t:SlideMenuView.Content>
+</t:SlideMenuView>

@@ -1,0 +1,23 @@
+﻿using System;
+using Xamarin.Forms;
+
+namespace WorkoutPlaner.WIN.Converters
+{
+    public class TabIconConverter : Windows.UI.Xaml.Data.IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if (value is FileImageSource)
+            {
+                return string.Format("ms-appx:///{0}", ((FileImageSource)value).File);
+            }
+
+            return value;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            return null;
+        }
+    }
+}

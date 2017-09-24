@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:WorkoutPlaner.Helpers"
+             x:Class="WorkoutPlaner.Views.Templates.AddedExercisesTemplate">
+    <ContentView.Content>
+        <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Padding="2">
+            <Grid.ColumnSpacing>
+                <OnPlatform x:TypeArguments="x:Double"
+                            Android="20"
+                            WinPhone="5"/>
+            </Grid.ColumnSpacing>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Text="{Binding Exercise.Name}" FontAttributes="Bold"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="StartAndExpand"
+                   Style="{StaticResource DefaultLabelStyle}">
+                <Label.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double"
+                                Android="20"
+                                WinPhone="14"/>
+                </Label.FontSize>
+            </Label>
+            <StackLayout Padding="0" Margin="0" Spacing="0"
+                         Orientation="Horizontal" Grid.Column="1" 
+                         VerticalOptions="CenterAndExpand">
+                <Label Text="{Binding Reps}" 
+                       Style="{StaticResource DefaultLabelStyle}">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                    Android="20"
+                                    WinPhone="14"/>
+                    </Label.FontSize>
+                </Label>
+                <Label Text=" X  "
+                       Style="{StaticResource DefaultLabelStyle}">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                    Android="20"
+                                    WinPhone="14"/>
+                    </Label.FontSize>
+                </Label>
+                <Label Text="{Binding Serial}" 
+                       Style="{StaticResource DefaultLabelStyle}">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                    Android="20"
+                                    WinPhone="14"/>
+                    </Label.FontSize>
+                </Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" 
+                         Orientation="Horizontal" 
+                         VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="EndAndExpand">
+                <Image WidthRequest="30"
+                       IsVisible="{Binding IsEditable}"
+                       Source="{i18n:ImageResource Source=edit_btn.png}" Aspect="AspectFill"
+                       HorizontalOptions="End"
+                       VerticalOptions="CenterAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding EditCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image WidthRequest="30"
+                       IsVisible="{Binding IsEditable}"
+                       Source="{i18n:ImageResource Source=delete_btn.png}" Aspect="AspectFill"
+                       HorizontalOptions="End"
+                       VerticalOptions="CenterAndExpand">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding DeleteCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

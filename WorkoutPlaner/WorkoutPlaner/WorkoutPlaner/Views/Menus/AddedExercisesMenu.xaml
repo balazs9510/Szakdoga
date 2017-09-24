@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<t:SlideMenuView xmlns="http://xamarin.com/schemas/2014/forms" 
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                 xmlns:t="clr-namespace:SlideOverKit;assembly=SlideOverKit" 
+                 xmlns:i18n="clr-namespace:WorkoutPlaner.Helpers"
+                 xmlns:templates="clr-namespace:WorkoutPlaner.Views.Templates"
+                 HeightRequest="250"
+                 BackgroundColor="{StaticResource GrayColor}"
+                 x:Class="WorkoutPlaner.Views.Menus.AddedExerciseMenu">
+    <t:SlideMenuView.Content>
+        <ListView ItemsSource="{Binding AddedExercises}">
+            <ListView.Header>
+                <Label Text="{i18n:Translate NoItem}"
+                       Style="{StaticResource DefaultLabelStyle}"
+                       IsVisible="{Binding AddedExercises.Count,Converter={StaticResource InverseIntToBoolConverter}}}"/>
+            </ListView.Header>
+            <ListView.HeightRequest>
+                <OnPlatform x:TypeArguments="x:Double"
+                                    Android="200"
+                                    WinPhone="100"/>
+            </ListView.HeightRequest>
+            <ListView.RowHeight>
+                <OnPlatform x:TypeArguments="x:Int32"
+                                    Android="60"/>
+            </ListView.RowHeight>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <templates:AddedExercisesTemplate/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </t:SlideMenuView.Content>
+</t:SlideMenuView>

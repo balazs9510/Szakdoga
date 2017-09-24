@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="WorkoutPlaner.Views.Templates.MuscleGroupTemplate">
+    <ContentView.Content>
+        <Grid VerticalOptions="CenterAndExpand"
+              WidthRequest="150"
+              HeightRequest="100"
+              HorizontalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Source="{Binding Name, Converter={StaticResource StrintToImageSourceConverter}}" 
+                           HorizontalOptions="CenterAndExpand" Aspect="AspectFill"/>
+            <Label Text="{Binding Name, Converter={StaticResource TranslateConverter}}"
+                   VerticalOptions="EndAndExpand"
+                   HorizontalOptions="Center" 
+                   TextColor="White"
+                   BackgroundColor="Brown"
+                   Style="{StaticResource DefaultLabelStyle}"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

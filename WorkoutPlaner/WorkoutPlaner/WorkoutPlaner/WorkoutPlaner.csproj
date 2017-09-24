@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5C494E6-E4C4-4E7C-889A-CB51929F6BF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorkoutPlaner</RootNamespace>
+    <AssemblyName>WorkoutPlaner</AssemblyName>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Animation\Base\AnimationBase.cs" />
+    <Compile Include="Animation\Base\EasingType.cs" />
+    <Compile Include="Animation\FadeToAnimation.cs" />
+    <Compile Include="Behavior\NumberValidationBehavior.cs" />
+    <Compile Include="Controls\CheckBox.cs" />
+    <Compile Include="Converters\DateTimeToStringConverter.cs" />
+    <Compile Include="Converters\StrintToImageSourceConverter.cs" />
+    <Compile Include="Converters\TextChangedEventArgsConverter.cs" />
+    <Compile Include="Converters\DifficultyToImageSourceConverter.cs" />
+    <Compile Include="Converters\ErrorListToStringConverter.cs" />
+    <Compile Include="Converters\IntToBoolConverter.cs" />
+    <Compile Include="Converters\InverseBoolToColorConverter.cs" />
+    <Compile Include="Converters\InverseBoolConverter.cs" />
+    <Compile Include="Converters\BoolToColorConverter.cs" />
+    <Compile Include="Converters\InverseIntToBoolConverter.cs" />
+    <Compile Include="Converters\StringToUpperCaseConverter.cs" />
+    <Compile Include="Converters\TimeSpanToBoolConverter.cs" />
+    <Compile Include="Converters\TimeSpanToStringConverter.cs" />
+    <Compile Include="EventArgs\CheckBoxEventArgs.cs" />
+    <Compile Include="Helpers\EasingHelper.cs" />
+    <Compile Include="Helpers\FileImageResourceExtension.cs" />
+    <Compile Include="Helpers\ImageResourceExtension.cs" />
+    <Compile Include="Helpers\PlatformCulutre.cs" />
+    <Compile Include="Converters\TranslateConverter.cs" />
+    <Compile Include="Helpers\TranslateExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SyncronizationMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SyncronizationMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ValidationMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ICalendarService.cs" />
+    <Compile Include="Services\IDatabaseService.cs" />
+    <Compile Include="Services\ILocalize.cs" />
+    <Compile Include="Services\NetworkService.cs" />
+    <Compile Include="Sync\SyncManager.cs" />
+    <Compile Include="Sync\SyncMessage.cs" />
+    <Compile Include="ViewModels\Base\BaseViewModel.cs" />
+    <Compile Include="ViewModels\CompleteWorkoutPageViewModel.cs" />
+    <Compile Include="ViewModels\CreateWorkoutPageViewModel.cs" />
+    <Compile Include="ViewModels\Grouping\GroupedDoneWorkoutViewModel.cs" />
+    <Compile Include="ViewModels\HistoryPageViewModel.cs" />
+    <Compile Include="ViewModels\LoginPageViewModel.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\MuscleGroupPageViewModel.cs" />
+    <Compile Include="ViewModels\ProfilPageViewModel.cs" />
+    <Compile Include="ViewModels\WorkoutDetailPageViewModel.cs" />
+    <Compile Include="ViewModels\WorkoutsPageViewModel.cs" />
+    <Compile Include="Views\BasePage.cs" />
+    <Compile Include="Views\CompleteWorkoutPage.xaml.cs">
+      <DependentUpon>CompleteWorkoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateWorkoutPage.xaml.cs">
+      <DependentUpon>CreateWorkoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HistoryPage.xaml.cs">
+      <DependentUpon>HistoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Menus\AddToCalendarMenu.xaml.cs">
+      <DependentUpon>AddToCalendarMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MuscleGroupPage.xaml.cs">
+      <DependentUpon>MuscleGroupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Popups\ExerciseDescriptionPopup.xaml.cs">
+      <DependentUpon>ExerciseDescriptionPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Popups\ExerciseSerialRepsPopup.xaml.cs">
+      <DependentUpon>ExerciseSerialRepsPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Popups\SelectUserPopUp.xaml.cs">
+      <DependentUpon>SelectUserPopUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Popups\SyncResultPopUp.cs" />
+    <Compile Include="Views\ProfilPage.xaml.cs">
+      <DependentUpon>ProfilPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Menus\AddedExercisesMenu.xaml.cs">
+      <DependentUpon>AddedExercisesMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates\ExerciseTemplate.xaml.cs">
+      <DependentUpon>ExerciseTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates\MuscleGroupTemplate.xaml.cs">
+      <DependentUpon>MuscleGroupTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates\AddedExercisesTemplate.xaml.cs">
+      <DependentUpon>AddedExercisesTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Templates\WorkoutTemplate.xaml.cs">
+      <DependentUpon>WorkoutTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorkoutDetailPage.xaml.cs">
+      <DependentUpon>WorkoutDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WorkoutsPage.xaml.cs">
+      <DependentUpon>WorkoutsPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SyncronizationMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SyncronizationMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ValidationMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Views\CustomNavigationPage.xaml.cs">
+      <DependentUpon>CustomNavigationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\diff_easy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CustomNavigationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\WorkoutsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Templates\WorkoutTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\diff_hard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\diff_medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\add_btn_rounded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Templates\MuscleGroupTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MuscleGroupPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Templates\ExerciseTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\HistoryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ProfilPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CreateWorkoutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Popups\ExerciseSerialRepsPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\delete_btn.png" />
+    <EmbeddedResource Include="Images\edit_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Menus\AddedExercisesMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WorkoutPlaner.BLL\WorkoutPlaner.BLL.csproj">
+      <Project>{c79e292c-a4f7-4566-afa3-d4302a7249b1}</Project>
+      <Name>WorkoutPlaner.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WorkoutPlaner.Common\WorkoutPlaner.Common.csproj">
+      <Project>{4794adf6-96f1-4ca7-98be-a928d6568fcb}</Project>
+      <Name>WorkoutPlaner.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WorkoutPlaner.DAL\WorkoutPlaner.DAL.csproj">
+      <Project>{291d7287-03dd-4349-ad88-8a1257f0cf01}</Project>
+      <Name>WorkoutPlaner.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\up_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\WorkoutDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Templates\AddedExercisesTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Menus\AddToCalendarMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CompleteWorkoutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\gold_cup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Popups\SelectUserPopUp.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Alkar.png" />
+    <EmbeddedResource Include="Images\Bicepsz.png" />
+    <EmbeddedResource Include="Images\Combizom.png" />
+    <EmbeddedResource Include="Images\Hasizom.png" />
+    <EmbeddedResource Include="Images\Hátizom.png" />
+    <EmbeddedResource Include="Images\Mellizom.png" />
+    <EmbeddedResource Include="Images\Tricepsz.png" />
+    <EmbeddedResource Include="Images\Törzsizomzat.png" />
+    <EmbeddedResource Include="Images\Vádli.png" />
+    <EmbeddedResource Include="Images\Vállizom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Popups\ExerciseDescriptionPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Difficulty\ggyorb_dot.png" />
+    <EmbeddedResource Include="Images\Difficulty\ggyor_dot.png" />
+    <EmbeddedResource Include="Images\Difficulty\ggyo_dot.png" />
+    <EmbeddedResource Include="Images\Difficulty\ggy_dot.png" />
+    <EmbeddedResource Include="Images\Difficulty\gg_dot.png" />
+    <EmbeddedResource Include="Images\Difficulty\g_dot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\false.png" />
+    <EmbeddedResource Include="Images\succes.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />-->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<p:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:p="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkoutPlaner.Views.Popups.ExerciseDescriptionPopup">
+    <p:PopupPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Grid BackgroundColor="White"
+                  Padding="5"
+                  WidthRequest="400"
+                  HeightRequest="150"
+                  VerticalOptions="Center"   
+                  RowSpacing="0"
+                  HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="110"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="{Binding Name}" FontSize="Medium"
+                       Margin="3"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource LightGreenColor}"/>
+                <ScrollView Grid.Row="1" VerticalOptions="StartAndExpand">
+                    <Label Text="{Binding Description}" 
+                           FontSize="Small"
+                           TextColor="Black"/>
+                </ScrollView>
+            </Grid>
+        </StackLayout>
+    </p:PopupPage.Content>
+</p:PopupPage>

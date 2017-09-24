@@ -1,0 +1,12 @@
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server\bin\Debug\netcoreapp1.1\WorkoutPlaner.Server.deps.json
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server\bin\Debug\netcoreapp1.1\WorkoutPlaner.Server.runtimeconfig.json
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server\bin\Debug\netcoreapp1.1\WorkoutPlaner.Server.runtimeconfig.dev.json
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server\bin\Debug\netcoreapp1.1\WorkoutPlaner.Server.dll
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server\bin\Debug\netcoreapp1.1\WorkoutPlaner.Server.pdb
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server\bin\Debug\netcoreapp1.1\WorkoutPlaner.Server.DAL.dll
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server\bin\Debug\netcoreapp1.1\WorkoutPlaner.Server.DAL.pdb
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server\obj\Debug\netcoreapp1.1\WorkoutPlaner.Server.csprojResolveAssemblyReference.cache
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server\obj\Debug\netcoreapp1.1\WorkoutPlaner.Server.AssemblyInfo.cs
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server\obj\Debug\netcoreapp1.1\WorkoutPlaner.Server.dll
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server\obj\Debug\netcoreapp1.1\WorkoutPlaner.Server.pdb

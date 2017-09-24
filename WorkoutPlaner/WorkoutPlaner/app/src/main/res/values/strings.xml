@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Edzés tervező</string>
+    <string name="action_settings">Settings</string>
+    <string name="musclegroups">Izomcsoportok</string>
+    <string name="exercises">Gyakorlatok</string>
+    <string name="close">Bezár</string>
+    <string name="add_new_exercise">Új gyakorlat hozzáadása</string>
+    <string name="place_exercise_name">Add meg a nevét</string>
+    <string name="place_exercise_desc">Add meg a leírását</string>
+    <string name="select_ms">Válassz izomcsoportot:</string>
+    <string name="save">Mentés</string>
+    <string name="cancel">Mégse</string>
+    <string name="add_exercise">Gyakorlat felvétele</string>
+    <string name="add_image">Kép hozzáadása</string>
+    <string name="add_daily_workout">Új napi edzésterv</string>
+    <string name="workout_plan_name">Edzésterv neve :</string>
+    <string name="place_name">Ide írhatod a nevét</string>
+    <string name="search_exercise">Keresd meg a megfelelő gyakorlatot</string>
+    <string name="added_exercises">Idáig felvett elemek :</string>
+    <string name="serial_number">Sorozat szám :</string>
+    <string name="serial">sorozat szám</string>
+    <string name="reps">Ismétlés szám :</string>
+    <string name="reps_num">ismétlés szám</string>
+    <string name="error_msg_1">A név ne legyen üres, illetve legalább 4 betű, és legyen legalább egy gyakorlat.</string>
+    <string name="save_to_calendar">Mentés a naptárba</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete">Törlés</string>
+    <string name="title_activity_weekly_workout_description">WeeklyWorkoutDescriptionActivity
+    </string>
+    <string name="loading">Töltés...</string>
+    <string name="monday">Hétfő :</string>
+    <string name="tuesday">Kedd :</string>
+    <string name="wendsday">Szerda :</string>
+    <string name="thursday">Csütörtök :</string>
+    <string name="its_friday">Péntek :</string>
+    <string name="saturday">Szombat :</string>
+    <string name="sunday">Vasárnap :</string>
+    <string name="title_activity_add_weekly_workout">Heti edzés hozzáadása</string>
+    <string name="add">Hozzádás</string>
+    <string name="add_weekly_workout">Új heti edzésterv</string>
+    <string name="title_activity_add_monthly_wokrout">Havi edzés hozzáadása</string>
+    <string name="add_daily_wokrout_title">Napi edzés hozzáadása</string>
+    <string name="week_one">Első hét :</string>
+    <string name="week_two">Második hét :</string>
+    <string name="week_three">Harmadik hét :</string>
+    <string name="week_four">Negyedik hét :</string>
+    <string name="add_monthly_workout">Új havi edzésterv</string>
+    <string name="title_activity_monthly_workout_description">Havi edzés</string>
+    <string name="pls_chose">Kérlek válassz</string>
+</resources>

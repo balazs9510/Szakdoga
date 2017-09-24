@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<t:MenuContainerPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:template="clr-namespace:WorkoutPlaner.Views.Templates"
+             xmlns:t="clr-namespace:SlideOverKit;assembly=SlideOverKit"
+             xmlns:i18n="clr-namespace:WorkoutPlaner.Helpers"
+             Title="{Binding Workout.Name, Converter={StaticResource StringToUpperCaseConverter}"
+             x:Name="Page"
+             x:Class="WorkoutPlaner.Views.WorkoutDetailPage">
+    <t:MenuContainerPage.ToolbarItems>
+        <ToolbarItem Priority="0" 
+                     Order="Primary"
+                     Command="{Binding EditCommand}">
+
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="edit_btn"
+                            WinPhone="Assets\edit_btn.png"/>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Priority="1" 
+                     Order="Primary"
+                     Command="{Binding DeleteCommand}">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="delete_btn"
+                            WinPhone="Assets\delete_btn.png"/>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </t:MenuContainerPage.ToolbarItems>
+    <t:MenuContainerPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand" 
+                     Padding="10"
+                     HorizontalOptions="StartAndExpand">
+                <Label Text="{Binding Workout.Name, Converter={StaticResource StringToUpperCaseConverter}}" 
+                   TextColor="{StaticResource LightGreenColor}" FontSize="Large">
+                    <Label.Style>
+                        <OnPlatform x:TypeArguments="Style"
+                                    Android="{StaticResource DefaultLabelStyle}"
+                                    WinPhone="{StaticResource DefaultLabelStyleWinPhone}"/>
+                    </Label.Style>
+                </Label>
+
+                <Grid Padding="2" ColumnSpacing="2">
+                    <Grid.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                            Android="50"
+                                            WinPhone="90"/>
+                    </Grid.HeightRequest>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="30"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="{i18n:Translate Difficulty}" 
+                           VerticalOptions="Center"
+                           Grid.Column="0"
+                           HorizontalOptions="Start"
+                           FontSize="Medium">
+                        <Label.Style>
+                            <OnPlatform x:TypeArguments="Style"
+                                    Android="{StaticResource DefaultLabelStyle}"
+                                    WinPhone="{StaticResource DefaultLabelStyleWinPhone}"/>
+                        </Label.Style>
+                    </Label>
+                    <Label Grid.Column="1"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Text="{Binding Workout.Difficulty}" FontSize="Medium">
+                        <Label.Style>
+                            <OnPlatform x:TypeArguments="Style"
+                                    Android="{StaticResource DefaultLabelStyle}"
+                                    WinPhone="{StaticResource DefaultLabelStyleWinPhone}"/>
+                        </Label.Style>
+                    </Label>
+                </Grid>
+                <Label Text="{i18n:Translate AddedExercises}" FontSize="Medium">
+                    <Label.Style>
+                        <OnPlatform x:TypeArguments="Style"
+                                    Android="{StaticResource DefaultLabelStyle}"
+                                    WinPhone="{StaticResource DefaultLabelStyleWinPhone}"/>
+                    </Label.Style>
+                </Label>
+                <ListView 
+                    VerticalOptions="StartAndExpand"
+                     SeparatorVisibility="None"
+                     HorizontalOptions="Center"
+                     ItemsSource="{Binding Workout.ExerciseItems}">
+                    <ListView.Header>
+                        <Label IsVisible="{Binding Workout.ExerciseItems.Count,
+                        Converter={StaticResource InverseIntToBoolConverter}}" 
+                        Text="{i18n:Translate NoItem}" FontSize="Small">
+                            <Label.Style>
+                                <OnPlatform x:TypeArguments="Style"
+                                    Android="{StaticResource DefaultLabelStyle}"
+                                    WinPhone="{StaticResource DefaultLabelStyleWinPhone}"/>
+                            </Label.Style>
+                        </Label>
+                    </ListView.Header>
+                    
+                    <ListView.RowHeight>
+                        <OnPlatform x:TypeArguments="x:Int32" Android="70"/>
+                    </ListView.RowHeight>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <template:AddedExercisesTemplate/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <Grid VerticalOptions="FillAndExpand" 
+                  HorizontalOptions="FillAndExpand"
+                  ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0"
+                      VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"
+                       BackgroundColor="{StaticResource BlackColor}" >
+                    <Grid.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                    Android="70"
+                                    WinPhone="200"/>
+                    </Grid.HeightRequest>
+                    <Label Text="{i18n:Translate SaveToCalendar}"
+                    
+                    TextColor="{StaticResource WhiteColor}"
+                    HorizontalOptions="Center" 
+                    BindingContext="{x:Reference Page}"
+                    VerticalOptions="Center">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                                        Android="25"
+                                        WinPhone="15"/>
+                        </Label.FontSize>
+                        <Label.Margin>
+                            <OnPlatform x:TypeArguments="Thickness"
+                                        Android="0"/>
+                        </Label.Margin>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding OpenSaveCalendarCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+                <Grid Grid.Column="1" 
+                      VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" 
+                      BackgroundColor="{StaticResource LightGreenColor}">
+                    <Grid.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double"
+                                    Android="70"
+                                    WinPhone="200"/>
+                    </Grid.HeightRequest>
+                    <Label Text="{i18n:Translate StartNewWorkout}"           
+                    TextColor="{StaticResource WhiteColor}"
+                    HorizontalOptions="Center" 
+                        
+                    VerticalOptions="Center">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                                        Android="25"
+                                        WinPhone="15"/>
+                        </Label.FontSize>
+                        <Label.Margin>
+                            <OnPlatform x:TypeArguments="Thickness"
+                                        Android="0"/>
+                        </Label.Margin>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Command="{Binding StartCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+                
+            </Grid>
+        </StackLayout>
+
+    </t:MenuContainerPage.Content>
+</t:MenuContainerPage>

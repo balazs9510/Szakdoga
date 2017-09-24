@@ -1,0 +1,362 @@
+﻿[
+  {
+    "Name": "Fordított fogású bicepsz-gyakorlat",
+    "Description": "Ez a gyakorlat az alkar felső végén lévő nagy izmokat fejleszti, különösen a felkarorsócsonti izmot.",
+    "MuscleGroup": {
+      "Name": "Alkar"
+    }
+  },
+  {
+    "Name": "Fordított fogású bicepsz-gyakorlat",
+    "Description": "Fordított fogású bicepsz-gyakorlat",
+    "MuscleGroup": {
+      "Name": "Alkar"
+    }
+  },
+  {
+    "Name": "Csuklófeszítés",
+    "Description": "A csuklófelhúzás végrehajtása során az alkar külső oldalán lévő feszítő izmok vannak igénybe véve.",
+    "MuscleGroup": {
+      "Name": "Alkar"
+    }
+  },
+  {
+    "Name": "Csuklóbehúzás",
+    "Description": "Ez a gyakorlat erősen fejleszti az alkar izmait.",
+    "MuscleGroup": {
+      "Name": "Alkar"
+    }
+  },
+
+  {
+    "Name": "Törzshajlítás",
+    "Description": "A hasfal oldalán lévő izmokat dolgoztatja meg az oldalhajlítás. Ezen izmok között találjuk a külső ferde hasizmot, a négyoldalú ágyéki izmot, a fűrészizmot és az egyenes hasizmot.",
+    "MuscleGroup": {
+      "Name": "Törzsizomzat"
+    }
+  },
+  {
+    "Name": "Jó-reggelt gyakorlat",
+    "Description": "Válladon egy megterhelt kétkezes súlyzóval állj kényelmesen. Hajolj előre derékból, egyenes háttal, majd egyenesedj fel. Fejedet az egész mozdulat alatt tartsd egyenesen előrefelé, de ne felfelé.",
+    "MuscleGroup": {
+      "Name": "Törzsizomzat"
+    }
+  },
+  {
+    "Name": "Váltott oldalú törzsdöntés egykezes súlyzókkal",
+    "Description": "-",
+    "MuscleGroup": {
+      "Name": "Törzsizomzat"
+    }
+  },
+  {
+    "Name": "Felhúzás egyenes lábakkal, egykezes súlyzókkal",
+    "Description": "Ez a gyakorlat kis súllyal végezve a hát alsó részének erősítésére szolgál.",
+    "MuscleGroup": {
+      "Name": "Törzsizomzat"
+    }
+  },
+  {
+    "Name": "Vádligyakorlat vízszintes lábtológépen",
+    "Description": "A lábtoló gépes vádligyakorlat a kétfejű lábikra izmot dolgoztatja meg leginkább.",
+    "MuscleGroup": {
+      "Name": "Vádli"
+    }
+  },
+  {
+    "Name": "Vádligyakorlat lábtológépen",
+    "Description": "A lábtoló gépes vádligyakorlat a kétfejű lábikra izmot dolgoztatja meg leginkább.",
+    "MuscleGroup": {
+      "Name": "Vádli"
+    }
+  },
+  {
+    "Name": "Gyalogló-vádlizás",
+    "Description": "Ez a gyakorlat a kétfejű lábikraizmot fejleszti.",
+    "MuscleGroup": {
+      "Name": "Vádli"
+    }
+  },
+  {
+    "Name": "Ülő vádligép",
+    "Description": "Ezt a gyakorlatot is egy speciális gépen kell végezni. A végzett mozdulat inkább a talpemelő izmot (soleus) mozgatja meg.",
+    "MuscleGroup": {
+      "Name": "Vádli"
+    }
+  },
+  {
+    "Name": "Álló vádligép",
+    "Description": "Ez a gyakorlat a kétfejű lábikraizmot, azaz a vádlit, valamint a talpemelő izmot fejleszti.",
+    "MuscleGroup": {
+      "Name": "Vádli"
+    }
+  },
+  {
+    "Name": "Térdfelhúzás alsó csigán",
+    "Description": "A térdfelhúzás alsó csigán az egyenes hasizom alsó részét stimulálja leginkább. Fontos megjegyezni, hogy önmagában NEM lesz ettől kockahasad, az a diéta feladata. Ellenben ha már ledolgoztad a zsírt, a hasazástól szebb lesz, ami előbukkan .",
+    "MuscleGroup": {
+      "Name": "Hasizom"
+    }
+  },
+  {
+    "Name": "Lábemelés korláton vagy állványon",
+    "Description": "A lábemelés korláton vagy állványon a hasizom alsó harmadát dolgoztatja meg, de jelentős terhelést kap a tricepsz is, ha tartanod kell magad végig a korláton.",
+    "MuscleGroup": {
+      "Name": "Hasizom"
+    }
+  },
+  {
+    "Name": "Törzsfordítás ülve",
+    "Description": "A törzsfordítás ülve a ferde hasizmokat és a fűrészizmokat mozgatja meg. A hiedelemmel ellentétben NEM felelős a derék keskenyebbé tételéért! Azonban ha már ledolgoztad a zsírt, segíthet a terület tónusossá tételében.",
+    "MuscleGroup": {
+      "Name": "Hasizom"
+    }
+  },
+  {
+    "Name": "Felülés",
+    "Description": "A felülés a teljes egyenes hasizmot, különösen az izomzat felső felét, valamint a fűrészizmokat fejleszti. Fontos megjegyezni, hogy önmagában NEM lesz ettől kockahasad, az a diéta feladata. Ellenben ha már ledolgoztad a zsírt, a hasazástól szebb lesz, ami előbukkan.",
+    "MuscleGroup": {
+      "Name": "Hasizom"
+    }
+  },
+  {
+    "Name": "Hasprés",
+    "Description": "A hasprés a hasizmok felső részét dolgozza meg, de jó technikával az egyenes hasizom egésze kellő terhelést kap. Fontos megjegyezni, hogy önmagában NEM lesz ettől kockahasad, az a diéta feladata. Ellenben ha már ledolgoztad a zsírt, a hasazástól szebb lesz, ami előbukkan.",
+    "MuscleGroup": {
+      "Name": "Hasizom"
+    }
+  },
+  {
+    "Name": "Tricepsznyújtás fej fölött egykezes súlyzóval",
+    "Description": "A tricepsznyújtás fej fölött egykezes súlyzóval közvetlen veszi igénybe a felkar háromfejű izmait. Remekül megnyújtja a tricepsz hosszú fejét. Izolációs gyakorlat, nincs értelme csalva, nagy súllyal végezni, és sérülésveszélyes is lenne.",
+    "MuscleGroup": {
+      "Name": "Tricepsz"
+    }
+  },
+  {
+    "Name": "Kábeles tricepsznyújtás kötéllel",
+    "Description": "A kábeles tricepsznyújtás kötéllel remekül megnyújtja a tricepsz belső és alsó fejét, ugyanakkor a csúcsösszehúzódás pillanatában a külső fejet stimulálja legjobban. A negatív szakaszon elérhető megnyúlásnak köszönhetően nagyon erős csúcsösszehúzódást tudsz elérni ennél a gyakorlatnál.",
+    "MuscleGroup": {
+      "Name": "Tricepsz"
+    }
+  },
+  {
+    "Name": "Szűk fekvőtámasz",
+    "Description": "A szűk fekvőtámasz a tricepszet dolgoztatja meg elsődlegesen, emellett a mellizom és a vállizom első feje is jelentős stimulációt kap. A törzs pedig stabilizáló szereppel bír.",
+    "MuscleGroup": {
+      "Name": "Tricepsz"
+    }
+  },
+  {
+    "Name": "Tricepsznyújtás fekve",
+    "Description": "A tricepsznyújtás fekve a háromfejű karizmot (tricepszet) veszi igénybe. Mindhárom fej erős terhelést kap, különösen, ha a felső ponton tudatosan ráfeszítünk a tricepszre.",
+    "MuscleGroup": {
+      "Name": "Tricepsz"
+    }
+  },
+  {
+    "Name": "Csigás letolás",
+    "Description": "A csigás letolás az egyik legelterjedtebb tricepsz-fejlesztő gyakorlat, bár sokan megkérdőjelezik hatásosságát. Kiválóan képes hangsúlyozni a jellegzetes \"lópatkót\". Elsősorban izolációs gyakorlatként érdemes rá tekinteni.\"",
+    "MuscleGroup": {
+      "Name": "Tricepsz"
+    }
+  },
+  {
+    "Name": "Kalapács-bicepsz gyakorlat",
+    "Description": "A kalapács-bicepsz gyakorlat a bicepsz alatt futó brachialis izmot és az alkar izmait dolgoztatja meg. A brachialis izom fejlesztésével javíthatod a bicepszed csúcsosságát.",
+    "MuscleGroup": {
+      "Name": "Bicepsz"
+    }
+  },
+  {
+    "Name": "Bicepsz állva váltott karral",
+    "Description": "A bicepsz állva váltott karral a kétfejű karizmokat és másodlagos terheléssel az alkar izmait dolgoztatja meg elsősorban.",
+    "MuscleGroup": {
+      "Name": "Bicepsz"
+    }
+  },
+  {
+    "Name": "Koncentrált bicepszgyakorlat",
+    "Description": "A koncentrált bicepszgyakorlat a kétfejű karizmot fejleszti, annak is elsősorban a csúcsosságát lehet vele kihangsúlyozni - bár ez azért nagyrészt genetikai tényezőktől is függ.",
+    "MuscleGroup": {
+      "Name": "Bicepsz"
+    }
+  },
+  {
+    "Name": "Bicepsz állva kétkezes rúddal",
+    "Description": "A bicepsz állva kétkezes rúddal a kétfejű karizmokat veszi igénybe, és másodlagos igénybevételt kap az alkar izomzata.",
+    "MuscleGroup": {
+      "Name": "Bicepsz"
+    }
+  },
+  {
+    "Name": "Hack-gépes guggolás",
+    "Description": "Ez a gyakorlat a comb középső és alsó részét stimulálja, emellett a terpesz szélességével is tudod irányítani a stimuláció helyét. Természetesen a négyfejű combizom egésze keményen bedurran a Hack guggolástól, azonban a fentebb említett területek nagyobb stimulációt kapnak.",
+    "MuscleGroup": {
+      "Name": "Combizom"
+    }
+  },
+  {
+    "Name": "Lábnyújtás",
+    "Description": "Ez a legjobb izolációs gyakorlat a négyfejű combizom igénybevételére. Egyedül, önmagában nem alkalmas arra, hogy nagy combizmokat építsünk, azonban a részletek kidolgozására, valamint speciális edzéstechnikák kivitelezéséhez (előfárasztásos szuperszett, stb) kiválóan megfelel.",
+    "MuscleGroup": {
+      "Name": "Combizom"
+    }
+  },
+  {
+    "Name": "Lábtolás",
+    "Description": "Ez a gyakorlat egy fordított guggolásra emlékeztet, bár a legtöbb edzőteremben állítható támlájú 45o-os lábtológép van. Sok testépítő jobban kedveli ezt a gyakorlatot, mint a guggolást, mert lehetővé teszi, hogy teljes mértékben a láb mozgására összpontosítsanak, anélkül, hogy a csípő jelentősebb mértékben részt venne a mozdulatban. Sokkal kisebb a sérülés veszélye is mint a guggolás esetében, ezét kimondottan javasolt azoknak a sportolóknak, akik a súlyzós edzést valamilyen más sport mellet kiegészítésként végzik. Az elfogadott nézet szerint azonban a lábtolás nem építi olyan hatékonyan a combizmokat, mint a guggolás.",
+    "MuscleGroup": {
+      "Name": "Combizom"
+    }
+  },
+  {
+    "Name": "Guggolás",
+    "Description": "Ez a mozgás, egyike a legjobb gyakorlatoknak, mivel ez érinti a test fő izomcsoportjainak legtöbbjét. A guggolás megdolgoztatja a combizmokat, a csípő- és a farizmokat, a lábbicepszet és a hátizmok alsó részét. A hasi, a felső háti, a vádli- és a vállizmokat is igénybe veszi.",
+    "MuscleGroup": {
+      "Name": "Combizom"
+    }
+  },
+  {
+    "Name": "Vállvonogatás",
+    "Description": "Ez a gyakorlat a vállöv izmait, köztük a csuklyás izmot, a nyak és a hát felső izmait dolgoztatja.",
+    "MuscleGroup": {
+      "Name": "Vállizom"
+    }
+  },
+  {
+    "Name": "Döntött törzsű oldalemelés ferdepadon",
+    "Description": "A döntött törzsű oldalemelés ferdepadon a vállizom hátsó fejét dolgoztatja meg, de másodlagos terhelést kap az oldalsó delta és a trapézizom is.",
+    "MuscleGroup": {
+      "Name": "Vállizom"
+    }
+  },
+  {
+    "Name": "Előreemelés rúddal",
+    "Description": "Az előreemelés rúddal az elülső deltát veszi igénybe, és másodlagos igénybevételt kap a csuklyásizom is, és csekély mértékű stimulust kapnak a vállizom oldalsó rostjai is.",
+    "MuscleGroup": {
+      "Name": "Vállizom"
+    }
+  },
+  {
+    "Name": "Előreemelés",
+    "Description": "Álló helyzetben fogj a kezeidben egy pár kézisúlyzót. Egyik kezed emeld fel egyenesen magad előtt, amíg a súly magasabbra kerül a szemednél, majd miközben ezt a karodat leereszted, ezzel párhuzamosan emeld fel a másikat. Ezt a váltott karú mozgást folyamatosan végezd, egyik helyzetben se tarts szünetet.",
+    "MuscleGroup": {
+      "Name": "Vállizom"
+    }
+  },
+  {
+    "Name": "Állig húzás",
+    "Description": "Az állig húzás igénybe veszi a delta és a csuklyás izmot. Másodlagos terhelést kap a bicepsz és az alkar izomzata.",
+    "MuscleGroup": {
+      "Name": "Vállizom"
+    }
+  },
+  {
+    "Name": "Oldalemelés állva",
+    "Description": "Az oldalemelés állva az oldalsó deltaizmokat fejleszti elsősorban - ha helyesen hajtod végre.",
+    "MuscleGroup": {
+      "Name": "Vállizom"
+    }
+  },
+  {
+    "Name": "Vállból nyomás egykezes súlyzóval",
+    "Description": "A gyakorlat elsősorban az első és az oldalsó deltaizmokat fejleszti.",
+    "MuscleGroup": {
+      "Name": "Vállizom"
+    }
+  },
+  {
+    "Name": "Nyakhoz húzás hátgépen",
+    "Description": "A nyakhoz húzás hátgépen kifejezetten a széles hátizom megdolgoztatására alkalmas gyakorlat, de természetesen a bicepsz és az alkar is kap másodlagos terhelést.",
+    "MuscleGroup": {
+      "Name": "Hátizom"
+    }
+  },
+  {
+    "Name": "Egykezes döntött törzsű evezés (fűrészelés)",
+    "Description": "Az egykezes döntött törzsű evezés kézisúlyzóval a hát felső izmait, különösen a széles hátizmokat és a karhajlító izmokat, főleg a kétfejű karizmot dolgoztatja meg.",
+    "MuscleGroup": {
+      "Name": "Hátizom"
+    }
+  },
+  {
+    "Name": "Felhúzás - elemelés",
+    "Description": "A felhúzás az erőemelés harmadik gyakorlata. Kétségtelenül a legnehezebb erőgyakorlat. A erő, a puszta fizikai erő igazi próbája. A guggolás mellett a leghatásosabb teljes testet megmozgató gyakorlat. Felállni egy képtelenül nagy súllyal, ez az igazi kihívás. A felhúzást kevesen csinálják, mert rosszul végezve igen sérülésveszélyes is lehet, ám jól kivitelezve az egyik leghatásosabb tömegnövelő alapgyakorlat.",
+    "MuscleGroup": {
+      "Name": "Hátizom"
+    }
+  },
+  {
+    "Name": "T-rudas evezés",
+    "Description": "A T-rudas evezés egy kiváló gyakorlat a hátizom vastagságának növelésére.",
+    "MuscleGroup": {
+      "Name": "Hátizom"
+    }
+  },
+  {
+    "Name": "Döntött törzsű evezés",
+    "Description": "A döntött törzsű evezés a széles hátizmot veszi igénybe, másodlagos hatással van a csuklyás izomra, a rombuszizomra, a mély hátizmokra, a deltaizom hátsó felére, a kétfejű szárizomra és az alkarokra.",
+    "MuscleGroup": {
+      "Name": "Hátizom"
+    }
+  },
+  {
+    "Name": "Mellhez húzás széles fogással",
+    "Description": "A mellhez húzás széles fogással a széles hátizmokat dolgoztatja meg elsősorban, de a bicepsz és az alkar is kap másodlagos terhelést. A cél az, hogy ezt minél inkább kiküszöböld",
+    "MuscleGroup": {
+      "Name": "Hátizom"
+    }
+  },
+  {
+    "Name": "Széles fogású húzódzkodás",
+    "Description": "A széles fogású húzódzkodás a széles hátizmok fejlesztésére alkalmas leginkább.",
+    "MuscleGroup": {
+      "Name": "Hátizom"
+    }
+  },
+  {
+    "Name": "Áthúzás egykezes súlyzóval",
+    "Description": "Az áthúzás mellre a legjobb mozgás a mellkas tágítására, már amennyire ez lehetséges egyáltalán. Jelentős igénybevétel jut a mell-, a hát- és az elülső fűrészizmokra. Az áthúzás egykezes súlyzóval egy kifejezetten univerzális gyakorlat a mell- és hátizmok fejlesztésére.",
+    "MuscleGroup": {
+      "Name": "Mellizom"
+    }
+  },
+  {
+    "Name": "Fekvenyomás egyenes padon",
+    "Description": "A fekvenyomás egyenes padon igénybe veszi a mellkasi izmokat, a deltaizmokat és a tricepszet. A legtöbb testépítőbajnok a fekve nyomást tekinti a felsőtestgyakorlatok egyik legjobbjának.",
+    "MuscleGroup": {
+      "Name": "Mellizom"
+    }
+  },
+  {
+    "Name": "Fekvenyomás egykezes súlyzókkal",
+    "Description": "A fekvenyomás egykezes súlyzókkal a mellizom középső részét edzi meg, de alapvetően az egész mellizmot stimulálja.",
+    "MuscleGroup": {
+      "Name": "Mellizom"
+    }
+  },
+  {
+
+    "Name": "Fekvenyomás ferde padon",
+    "Description": "A fekvenyomás ferde padon a felső mellizmokat, a mellső deltaizmokat és háromfejű karizmokat veszi igénybe. Nagy előnye a gyakorlatnak, hogy előnyösebb formát kölcsönöz a mellizmoknak - gyakorlatilag pólón keresztül is jobban lehet majd látni ",
+    "MuscleGroup": {
+      "Name": "Mellizom"
+    }
+  },
+  {
+    "Name": "Tolódzkodás",
+    "Description": "A tolódzkodás egy remek mellizom-gyakorlat, különösen, ha a rudak viszonylag távol (70-85 cm) vannak egymástól. Az egymáshoz túl közel lévő rudak nagyobb mértékben mozgatják a tricepszet, bár azért a mellizom alsó és külső részét is megterhelik. Tehát a tolódzkodás a mellre akkor fog leginkább hatni, ha relatíve széles fogást alkalmazol.",
+    "MuscleGroup": {
+      "Name": "Mellizom"
+    }
+  },
+  {
+
+    "Name": "Tárogatás pec-deck gépen",
+    "Description": "A tárogatás pec-deck gépen remekül fejleszti a mellizom belső régióit, amennyiben már megfelelő tömeget építettél fel a mellkasodra.",
+    "MuscleGroup": {
+      "Name": "Mellizom"
+    }
+  }
+]

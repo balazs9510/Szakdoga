@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:helpers="clr-namespace:WorkoutPlaner.Helpers"
+             xmlns:i18n="clr-namespace:WorkoutPlaner.Helpers"
+             x:Name="PopupPage"
+             x:Class="WorkoutPlaner.Views.Popups.ExerciseSerialRepsPopup">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="NumberFrameStyle" TargetType="{x:Type Frame}">
+                <Setter Property="OutlineColor" Value="{StaticResource BlackColor}"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="1"/>
+                <Setter Property="Margin" Value="50"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="HeightRequest" Value="400"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource WhiteColor}"/>
+                <Setter Property="HasShadow" Value="True"/>
+            </Style>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <pages:PopupPage.Content>
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
+              Padding="20" BackgroundColor="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Frame Grid.ColumnSpan="2"
+                   OutlineColor="{StaticResource BlackColor}"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="15" IsClippedToBounds="True"
+                   Padding="14"
+                   Grid.RowSpan="2" Grid.Column="0" BackgroundColor="{StaticResource WhiteColor}">
+                <Frame.CornerRadius>
+                    <OnPlatform x:TypeArguments="x:Single"
+                                WinPhone="0"
+                                Android="20"/>
+                </Frame.CornerRadius>
+                <Grid ColumnSpacing="14" 
+                      HorizontalOptions="Fill"
+                      RowSpacing="14" Padding="14" BackgroundColor="Transparent">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Style="{StaticResource DefaultLabelStyle}" 
+                        Grid.Column="0" Grid.Row="0"
+                        HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand"
+                        Text="{i18n:Translate Reps}">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                                        Android="20"
+                                        WinPhone="14"/>
+                        </Label.FontSize>
+                    </Label>
+                    <Label Style="{StaticResource DefaultLabelStyle}" 
+                           Grid.Column="1" Grid.Row="0"
+                           HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand"
+                           Text="{i18n:Translate SerialNumber}">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                                        Android="20"
+                                        WinPhone="14"/>
+                        </Label.FontSize>
+                    </Label>
+                    <Label Grid.Column="0" Grid.Row="1" Text="1"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="FillAndExpand"
+                           x:Name="RepsLabel" TextColor="{StaticResource LightGreenColor}"/>
+                    <Label Text="1" Grid.Column="1" Grid.Row="1"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           HorizontalOptions="CenterAndExpand"
+                           x:Name="SerialLabel" TextColor="{StaticResource LightGreenColor}"/>
+                    <Stepper x:Name="RepsStepper"
+                            BackgroundColor="{StaticResource LightGreenColor}"
+                            HorizontalOptions="CenterAndExpand"
+                            ValueChanged="RepsStepper_ValueChanged"
+                            Grid.Row="2" Grid.Column="0"
+                            Value="1" Minimum="1" Maximum="14" Increment="1"/>
+                    <Stepper x:Name="SerialStepper"
+                             BackgroundColor="{StaticResource LightGreenColor}"
+                              HorizontalOptions="CenterAndExpand"
+                              ValueChanged="SerialStepper_ValueChanged"
+                              Grid.Row="2" Grid.Column="1"
+                              Value="1" Minimum="1" Maximum="50" Increment="1"/>
+                    <Button 
+                     Grid.Row="3"
+                     BackgroundColor="{StaticResource LightGreenColor}"
+                     Text="{i18n:Translate Save}"
+                     Grid.Column="1" Clicked="SaveAsync" 
+                     HorizontalOptions="End"/>
+                </Grid>
+            </Frame>
+            <!--Close button-->
+            <BoxView Grid.Row="0" Color="White"
+                   Margin="5"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="StartAndExpand"
+                   Grid.Column="1" WidthRequest="30" HeightRequest="30"/>
+            <Image Grid.Row="0"
+                   BindingContext="{x:Reference PopupPage}"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="StartAndExpand"
+                   Rotation="45"
+                   Aspect="AspectFill"
+                   Source="{helpers:ImageResource Source=add_btn_rounded.png}"
+                   Grid.Column="1" WidthRequest="50" HeightRequest="50">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CloseCommand}" NumberOfTapsRequired="1"/>
+                </Image.GestureRecognizers>
+            </Image>
+           
+        </Grid>
+    </pages:PopupPage.Content>
+</pages:PopupPage>

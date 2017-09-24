@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<p:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:WorkoutPlaner.Helpers"
+             xmlns:p="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Name="Page"
+             x:Class="WorkoutPlaner.Views.Popups.SelectUserPopUp">
+    <!--<p:PopupPage.Content>-->
+        <!--<StackLayout VerticalOptions="CenterAndExpand"
+                     BackgroundColor="AntiqueWhite"
+                     HeightRequest="400"
+                     WidthRequest="200"
+                     HorizontalOptions="CenterAndExpand">
+            --><!--<ListView ItemsSource="{Binding Users}"
+                      HeightRequest="300"
+                      WidthRequest="200"
+                      SelectedItem="{Binding SelectedUser}">
+                <ListView.RowHeight>
+                    <OnPlatform x:TypeArguments="x:Int32"
+                                WinPhone="100"
+                            Android="100"/>
+                </ListView.RowHeight>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text=" asd"/>
+                        --><!--<ViewCell>
+                            --><!--<StackLayout VerticalOptions="StartAndExpand">
+                                <Label Text="{Binding Name}" TextColor="Black"
+                                   FontSize="Medium"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{i18n:Translate LastLogin}" TextColor="Black"
+                                           FontSize="Small"/>
+                                    <Label Text="{Binding LastLogin,Converter={StaticResource DateTimeToStringConverter}}"
+                                           HorizontalOptions="EndAndExpand"
+                                           TextColor="Black"
+                                           FontSize="Small"/>
+                                </StackLayout>
+                            </StackLayout>--><!--
+                        </ViewCell>--><!--
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>--><!--
+            <Button Text="{i18n:Translate Next}" 
+                    BackgroundColor="{StaticResource LightGreenColor}"
+                    Clicked="NextClick"/>
+        </StackLayout>
+    </p:PopupPage.Content>-->
+
+</p:PopupPage>

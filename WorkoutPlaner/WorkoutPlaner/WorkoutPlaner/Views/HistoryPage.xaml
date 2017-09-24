@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<p:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:p="clr-namespace:WorkoutPlaner.Views"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:i18n="clr-namespace:WorkoutPlaner.Helpers"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="WorkoutPlaner.Views.HistoryPage">
+    <ListView ItemsSource="{Binding GroupedDoneWorkouts}" 
+              IsGroupingEnabled="True"
+              GroupDisplayBinding="{Binding Week}"
+              GroupShortNameBinding="{Binding WeekNumber}">
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell Height="50">
+                    <Label Text="{Binding Week}" TextColor="{StaticResource LightGreenColor}" VerticalOptions="Center"> 
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double"
+                                        Android="30" WinPhone="30"/>
+                        </Label.FontSize>
+                    </Label>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label 
+                        Grid.Row="0" Grid.ColumnSpan="2"
+                        TextColor="Black"
+                        Text="{Binding Workout.Name}" FontSize="Large"/>
+                        <Label TextColor="Black" 
+                           Grid.Row="1" Grid.Column="0"
+                           FontSize="Medium" Text="{i18n:Translate Text=CompleteTime}" />
+                        <Label Text="{Binding CompleteTime,Converter={StaticResource TimeSpanToStringConverter}}"
+                           Grid.Row="1" Grid.Column="1"
+                           HorizontalOptions="End"
+                           TextColor="Black" FontSize="Medium"/>
+                    </Grid>
+                    
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.RowHeight>
+            <OnPlatform x:TypeArguments="x:Int32"
+                        Android="65"/>
+        </ListView.RowHeight>
+    </ListView>
+</p:BasePage>

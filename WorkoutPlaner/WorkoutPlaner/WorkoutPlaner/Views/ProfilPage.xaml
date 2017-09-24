@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<page:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:page="clr-namespace:WorkoutPlaner.Views"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:i18n="clr-namespace:WorkoutPlaner.Helpers"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="WorkoutPlaner.Views.ProfilPage">
+    <StackLayout Padding="3">
+        <Grid RowSpacing="2" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="UserImage"
+                   WidthRequest="100"
+                   IsOpaque="True"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFill"
+                   HeightRequest="100" 
+                   Grid.Column="0" 
+                   Grid.RowSpan="3">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="2" Command="{Binding TakePhotoCommand}"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="{Binding User.Name}" 
+                   FontSize="Large" 
+                   Grid.Column="1" Grid.Row="0"
+                   TextColor="Black"/>
+            <Label Text="{Binding User.Age, StringFormat='Kor: {0:N0}'}" 
+                   IsVisible="{Binding User.Age,Converter={StaticResource IntToBoolConverter}}"
+                   FontSize="Medium" 
+                   Grid.Column="1" Grid.Row="1"
+                   TextColor="Black"/>
+            <Label Text="{Binding User.Weigth,StringFormat='Testsúly: {0:N0} kg'}" 
+                   IsVisible="{Binding User.Weigth,Converter={StaticResource IntToBoolConverter}}"
+                   FontSize="Medium" 
+                   Grid.Column="1" Grid.Row="2"
+                   TextColor="Black"/>
+        </Grid>
+        <BoxView HeightRequest="2" Color="Black" BackgroundColor="Black" HorizontalOptions="Fill" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <Label Text="{i18n:Translate AutSync}" FontSize="Medium" Margin="10"
+                   VerticalOptions="Center"
+                   HorizontalOptions="StartAndExpand"
+                   TextColor="Black"/>
+            <Switch IsToggled="{Binding User.AutSync}" VerticalOptions="Center" HorizontalOptions="End"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="Fill" Padding="10" IsVisible="{Binding User.AutSync}">
+            <Label Text="{i18n:Translate LastSuccesfulSync}" 
+                   VerticalOptions="Center"
+                   HorizontalOptions="StartAndExpand"
+                   FontSize="Small" TextColor="Black"/>
+            <Label Text="{Binding User.LastSucessfulSync, Converter={StaticResource DateTimeToStringConverter}}"
+                   VerticalOptions="Center" HorizontalOptions="End"
+                   FontSize="Small" TextColor="Black"/>
+        </StackLayout>
+    </StackLayout>
+</page:BasePage>

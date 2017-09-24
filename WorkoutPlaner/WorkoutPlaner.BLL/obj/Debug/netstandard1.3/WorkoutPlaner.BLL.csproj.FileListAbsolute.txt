@@ -1,0 +1,11 @@
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.BLL\bin\Debug\netstandard1.3\WorkoutPlaner.BLL.deps.json
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.BLL\bin\Debug\netstandard1.3\WorkoutPlaner.BLL.dll
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.BLL\bin\Debug\netstandard1.3\WorkoutPlaner.BLL.pdb
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.BLL\bin\Debug\netstandard1.3\WorkoutPlaner.Common.dll
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.BLL\bin\Debug\netstandard1.3\WorkoutPlaner.DAL.dll
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.BLL\bin\Debug\netstandard1.3\WorkoutPlaner.DAL.pdb
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.BLL\bin\Debug\netstandard1.3\WorkoutPlaner.Common.pdb
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.BLL\obj\Debug\netstandard1.3\WorkoutPlaner.BLL.csprojResolveAssemblyReference.cache
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.BLL\obj\Debug\netstandard1.3\WorkoutPlaner.BLL.AssemblyInfo.cs
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.BLL\obj\Debug\netstandard1.3\WorkoutPlaner.BLL.dll
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner\WorkoutPlaner.BLL\obj\Debug\netstandard1.3\WorkoutPlaner.BLL.pdb

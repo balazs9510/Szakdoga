@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             x:Class="WorkoutPlaner.Views.Templates.WorkoutTemplate">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="FrameStyle" TargetType="{x:Type Frame}">
+                <Setter Property="OutlineColor" Value="{StaticResource GrayColor}"/>
+                <Setter Property="VerticalOptions" Value="StartAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="Padding" Value="1"/>
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="HasShadow" Value="True"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Frame Style="{StaticResource FrameStyle}">
+            <Frame.HeightRequest>
+                <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="110"
+                            WinPhone="70"/>
+            </Frame.HeightRequest>
+            <Frame.Content>
+                <Grid RowSpacing="2" 
+                      Padding="2" 
+                      VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="{Binding Name, Converter={StaticResource StringToUpperCaseConverter}}" 
+                           Grid.Column="0" Grid.Row="0"
+                           TextColor="{StaticResource GreenColor}"
+                           FontSize="Medium"
+                           Margin="0,0,0,5"
+                           VerticalOptions="StartAndExpand"    
+                           FontAttributes="Bold"/>
+                    <Label Text="Nehézség"
+                           VerticalOptions="StartAndExpand" 
+                           TextColor="{StaticResource BlackColor}"
+                           Grid.Column="0" Grid.Row="1"
+                           FontSize="Small"/>
+                    <Image Aspect="AspectFit"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"
+                           Grid.RowSpan="2" Grid.Column="1"
+                           Source="{Binding Difficulty,Converter={StaticResource DifficultyToImageSourceConverter}}}"/>
+                </Grid>
+            </Frame.Content>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

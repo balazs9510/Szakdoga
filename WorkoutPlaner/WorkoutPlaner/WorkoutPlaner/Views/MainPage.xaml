@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+            xmlns:views="clr-namespace:WorkoutPlaner.Views"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            NavigationPage.HasBackButton="False"
+            BarBackgroundColor="{StaticResource GreenColor}"
+            BackgroundColor="{StaticResource BackgroundColor}"
+            BarTextColor="{StaticResource WhiteColor}"
+            x:Class="WorkoutPlaner.Views.MainPage">
+    <TabbedPage.Title>
+        <OnPlatform      
+            x:TypeArguments="x:String"
+            WinPhone="Work Hard"/>
+    </TabbedPage.Title>
+
+    <views:WorkoutsPage>
+        <views:WorkoutsPage.Title>
+            <OnPlatform        
+                x:TypeArguments="x:String"
+                WinPhone="Edzés tervek"/>
+        </views:WorkoutsPage.Title>
+        <views:WorkoutsPage.Icon>
+            <OnPlatform        
+                x:TypeArguments="FileImageSource"
+                Android="menu_filter"
+                WinPhone="Assets\menu_filter.png"/>
+        </views:WorkoutsPage.Icon>
+    </views:WorkoutsPage>
+    <views:MuscleGroupPage>
+        <views:MuscleGroupPage.Title>
+            <OnPlatform        
+                x:TypeArguments="x:String"
+                WinPhone="Izomcsoportok"/>
+        </views:MuscleGroupPage.Title>
+        <views:MuscleGroupPage.Icon>
+            <OnPlatform        
+                x:TypeArguments="FileImageSource"
+                Android="menu_exercise"
+                WinPhone="Assets\menu_exercise.png"/>
+        </views:MuscleGroupPage.Icon>
+    </views:MuscleGroupPage>
+    <views:HistoryPage>
+        <views:HistoryPage.Title>
+            <OnPlatform        
+                x:TypeArguments="x:String"
+                WinPhone="Történések"/>
+        </views:HistoryPage.Title>
+        <views:HistoryPage.Icon>
+            <OnPlatform        
+                x:TypeArguments="FileImageSource"
+                Android="ic_history_white_18dp.png"
+                WinPhone="Assets\ic_history_white_18dp.png"/>
+        </views:HistoryPage.Icon>
+    </views:HistoryPage>
+    <!--<views:ProfilPage>
+        <views:ProfilPage.Title>
+            <OnPlatform        
+                x:TypeArguments="x:String"
+                WinPhone="Profil"/>
+        </views:ProfilPage.Title>
+        <views:ProfilPage.Icon>
+            <OnPlatform        
+                x:TypeArguments="FileImageSource"
+                Android="menu_profile"
+                WinPhone="Assets\menu_profile.png"/>
+        </views:ProfilPage.Icon>
+    </views:ProfilPage>-->
+</TabbedPage>

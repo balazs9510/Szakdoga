@@ -1,0 +1,7 @@
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server.DAL\bin\Debug\netstandard1.3\WorkoutPlaner.Server.DAL.deps.json
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server.DAL\bin\Debug\netstandard1.3\WorkoutPlaner.Server.DAL.dll
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server.DAL\bin\Debug\netstandard1.3\WorkoutPlaner.Server.DAL.pdb
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server.DAL\obj\Debug\netstandard1.3\WorkoutPlaner.Server.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server.DAL\obj\Debug\netstandard1.3\WorkoutPlaner.Server.DAL.AssemblyInfo.cs
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server.DAL\obj\Debug\netstandard1.3\WorkoutPlaner.Server.DAL.dll
+C:\Users\Balazs\Documents\Visual Studio 2017\Projects\WorkoutPlaner.Server\WorkoutPlaner.Server.DAL\obj\Debug\netstandard1.3\WorkoutPlaner.Server.DAL.pdb

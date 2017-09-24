@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<p:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:p="clr-namespace:WorkoutPlaner.Views"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+            xmlns:controls="clr-namespace:WorkoutPlaner.Controls"
+            xmlns:behavior="clr-namespace:WorkoutPlaner.Behavior"
+            xmlns:beh_prism="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Name="Page"
+            NavigationPage.HasBackButton="False"
+            x:Class="WorkoutPlaner.Views.LoginPage">
+    <p:BasePage.Title>
+        <OnPlatform
+            x:TypeArguments="x:String"
+            WinPhone="Work Hard"/>
+    </p:BasePage.Title>
+    <p:BasePage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LoginPanelStyle"
+                   TargetType="{x:Type Grid}">
+                <Setter Property="HeightRequest"
+                    Value="60" />
+                <Setter Property="BackgroundColor"
+                    Value="{StaticResource LightGreenColor}" />
+                <Setter Property="HorizontalOptions"
+                    Value="FillAndExpand" />
+                <Setter Property="VerticalOptions"
+                    Value="FillAndExpand" />
+            </Style>
+
+            <Style x:Key="RegisterPanelStyle"
+                   TargetType="{x:Type Grid}"
+                   BasedOn="LoginPanelStyle">
+                <Setter Property="BackgroundColor"
+                        Value="{StaticResource BlackColor}"/>
+            </Style>
+
+            <Style x:Key="LoginButtonStyleTwo" TargetType="{x:Type Button}">
+                <Setter Property="BackgroundColor" Value="{StaticResource LightGreenColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="BorderColor" Value="{StaticResource DarkGreenColor}"/>
+            </Style>
+
+            <Style x:Key="LoginButtonStyle" TargetType="{x:Type Label}">
+                <Setter Property="TextColor" 
+                    Value="{StaticResource WhiteColor}" />
+                <Setter Property="FontSize"
+                    Value="Large"/>
+                <!--<Setter Property="FontFamily"
+                    Value="{StaticResource HEINEKEN}"/>-->
+                <Setter Property="HorizontalOptions"
+                    Value="Center" />
+                <Setter Property="VerticalOptions"
+                    Value="Center" />
+            </Style>
+
+            <Style x:Key="RegisterLabelStyle" TargetType="{x:Type Label}">
+                <Setter Property="TextColor"
+                    Value="{StaticResource MildBlueColor}"/>
+                <Setter Property="HorizontalOptions"
+                    Value="CenterAndExpand" />
+                <Setter Property="VerticalOptions"
+                    Value="Start" />
+                <Setter Property="FontSize" 
+                    Value="Large"/>
+                <Setter Property="FontFamily"
+                    Value="{StaticResource Palermo}"/>
+                <Setter Property="FontAttributes"
+                    Value="Bold"/>
+                <Setter Property="Margin"
+                    Value="0,5,0,20"/>
+            </Style>
+
+            <Style x:Key="ThreeLineStack" TargetType="{x:Type StackLayout}">
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="Spacing" Value="2"/>
+                <Setter Property="Margin" Value="5,5"/>
+            </Style>
+
+            <Style x:Key="HeaderLabelStyle"
+                TargetType="{x:Type Label}">
+                <Setter Property="FontSize"
+                    Value="Medium" />
+                <Setter Property="TextColor"
+                    Value="{StaticResource GreenColor}" />
+                <Setter Property="HorizontalOptions"
+                    Value="Start" />
+            </Style>
+        </ResourceDictionary>
+    </p:BasePage.Resources>
+    <p:BasePage.Content>
+        <Grid 
+          ColumnSpacing="0"
+          RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!-- Login/Register panel -->
+            <Grid 
+                Style="{StaticResource LoginPanelStyle}"
+                Grid.Row="0"
+                BackgroundColor="{Binding IsLogin,Converter={StaticResource BoolToColorConverter}}"
+                Grid.Column="0">
+                <Label
+                    Text="[ Belépés ]"
+                    Style="{StaticResource LoginButtonStyle}"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Command="{Binding LoginPageCommand}"
+                        NumberOfTapsRequired="1"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+            <Grid 
+                Style="{StaticResource RegisterPanelStyle}"
+                Grid.Row="0"
+                BackgroundColor="{Binding IsLogin,Converter={StaticResource InverseBoolToColorConverter}}"
+                Grid.Column="1">
+                <Label
+                    Text="[ Regisztrálás ]"
+                    Style="{StaticResource LoginButtonStyle}"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Command="{Binding RegisterPageCommand}"
+                        NumberOfTapsRequired="1"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+            <StackLayout
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center"
+                VerticalOptions="Start">
+                 <!--Login layout-->
+                <StackLayout
+                IsVisible="{Binding IsLogin}"
+                WidthRequest="400"
+                HorizontalOptions="CenterAndExpand"
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Margin="12">
+                    <Label Style="{StaticResource RegisterLabelStyle}"
+                       Text="Regisztráltál már?"/>
+                    <StackLayout Style="{StaticResource ThreeLineStack}">
+                        <Label Text="E-mail cím" Style="{StaticResource HeaderLabelStyle}"/>
+                        <Entry Style="{StaticResource EntryStyle}" 
+                               Text="{Binding LoginUser.Email.Value}" Placeholder="példa@gmail.com" Keyboard="Email">
+                            <Entry.Behaviors>
+                                <beh_prism:EventToCommandBehavior 
+                                    EventName="TextChanged"
+                                    Command="{Binding ValidateLoginEmailCommand}">
+                                </beh_prism:EventToCommandBehavior>
+                            </Entry.Behaviors>
+                        </Entry>
+                        <Label Style="{StaticResource ValidationErrorLabelStyle}"
+                               Text="{Binding LoginUser.Email.Errors,Converter={StaticResource ErrorListToStringConverter}}"/>
+                    </StackLayout>
+
+                    <StackLayout Style="{StaticResource ThreeLineStack}">
+                        <Label Text="Jelszó" Style="{StaticResource HeaderLabelStyle}"/>
+                        <Entry Style="{StaticResource EntryStyle}" 
+                               Keyboard="Default"
+                               Text="{Binding LoginUser.Password.Value}" 
+                               Placeholder="Jelszó" IsPassword="True">
+                            <Entry.Behaviors>
+                                <beh_prism:EventToCommandBehavior 
+                                    EventName="TextChanged"
+                                    Command="{Binding ValidateLoginPasswordCommand}">
+                                </beh_prism:EventToCommandBehavior>
+                            </Entry.Behaviors>
+                        </Entry>
+                        <Label Style="{StaticResource ValidationErrorLabelStyle}"
+                               Text="{Binding LoginUser.Password.Errors,Converter={StaticResource ErrorListToStringConverter}}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="14">
+                        <controls:CheckBox Checked="{Binding LoginUser.RememberMe}"
+                            DefaultText="Emlékezz rám"
+                                           FontSize="20"
+                                           BoxColor="Black"/>
+                    </StackLayout>
+                    <Button Style="{StaticResource LoginButtonStyleTwo}"
+                            Text="Bejelentkezés" Command="{Binding LoginCommand}">
+                        <Button.BorderRadius>
+                            <OnPlatform
+                            x:TypeArguments="x:Int32"
+                            Android="20"
+                            WinPhone="30"/>
+                        </Button.BorderRadius>
+                        <Button.BorderWidth>
+                            <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="14"
+                            WinPhone="2"/>
+                        </Button.BorderWidth>
+                    </Button>
+                    <Button Style="{StaticResource LoginButtonStyleTwo}" 
+                            BindingContext="{x:Reference Page}"
+                            Text="Offline mód" 
+                            Command="{Binding LoginOfflineCommand}"
+                            IsEnabled="True">
+                        <Button.BorderRadius>
+                            <OnPlatform
+                            x:TypeArguments="x:Int32"
+                            Android="20"
+                            WinPhone="30"/>
+                        </Button.BorderRadius>
+                        <Button.BorderWidth>
+                            <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="14"
+                            WinPhone="2"/>
+                        </Button.BorderWidth>
+                    </Button>
+                </StackLayout>
+            
+             <!--Register layout-->
+                <StackLayout
+                     IsVisible="{Binding IsLogin, Converter={StaticResource InverseBoolConverter}}"
+                     WidthRequest="400"
+                     HorizontalOptions="CenterAndExpand"
+                     Grid.Row="1"
+                     Grid.ColumnSpan="2"
+                     Margin="12">
+                    <!--Email-->
+                    <StackLayout Style="{StaticResource ThreeLineStack}">
+                        <Label Style="{StaticResource HeaderLabelStyle}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="E-mail cím"/>
+                                    <Span Text="*" ForegroundColor="Red"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Entry Style="{StaticResource EntryStyle}" 
+                               Text="{Binding RegisterUser.Email.Value}"
+                               Placeholder="példa@gmail.com" Keyboard="Email">
+                            <Entry.Behaviors>
+                                <beh_prism:EventToCommandBehavior 
+                                    EventName="TextChanged"
+                                    Command="{Binding ValidateRegisterEmailCommand}">
+                                </beh_prism:EventToCommandBehavior>
+                            </Entry.Behaviors>
+                        </Entry>
+                        <Label Style="{StaticResource ValidationErrorLabelStyle}"
+                               Text="{Binding RegisterUser.Email.Errors,Converter={StaticResource ErrorListToStringConverter}}"/>
+                    </StackLayout>
+                    <!--PasswordFields-->
+                    <StackLayout Orientation="Horizontal">
+                        <!--Password-->
+                        <StackLayout Style="{StaticResource ThreeLineStack}" WidthRequest="200">
+                            <Label Style="{StaticResource HeaderLabelStyle}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Jelszó"/>
+                                        <Span Text="*" ForegroundColor="Red"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Entry Style="{StaticResource EntryStyle}"
+                                   Text="{Binding RegisterUser.Password.Value}"
+                                   Keyboard="Default" 
+                                   IsPassword="True"
+                                   Placeholder="Jelszó">
+                                <Entry.Behaviors>
+                                    <beh_prism:EventToCommandBehavior 
+                                    EventName="TextChanged"
+                                    Command="{Binding ValidateRegisterPasswordCommand}">
+                                    </beh_prism:EventToCommandBehavior>
+                                </Entry.Behaviors>
+                            </Entry>
+                            <Label Style="{StaticResource ValidationErrorLabelStyle}"
+                               Text="{Binding RegisterUser.Password.Errors,Converter={StaticResource ErrorListToStringConverter}}"/>
+                        </StackLayout>
+                        <!--Confirm Password-->
+                        <StackLayout Style="{StaticResource ThreeLineStack}"
+                                     WidthRequest="200">
+                            <Label Style="{StaticResource HeaderLabelStyle}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Jelszó ismét"/>
+                                        <Span Text="*" ForegroundColor="Red"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Entry Style="{StaticResource EntryStyle}" 
+                                   Text="{Binding RegisterUser.ConfirmPassword.Value}"
+                                   Keyboard="Default"
+                                   IsPassword="True" Placeholder="Jelszó ismét">
+                                <Entry.Behaviors>
+                                    <beh_prism:EventToCommandBehavior 
+                                    EventName="TextChanged"
+                                    Command="{Binding ValidateRegisterConfirmPasswordCommand}">
+                                    </beh_prism:EventToCommandBehavior>
+                                </Entry.Behaviors>
+                            </Entry>
+                            <Label Style="{StaticResource ValidationErrorLabelStyle}"
+                               Text="{Binding RegisterUser.ConfirmPassword.Errors,Converter={StaticResource ErrorListToStringConverter}}"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <!--Name-->
+                    <StackLayout Style="{StaticResource ThreeLineStack}">
+                        <Label Style="{StaticResource HeaderLabelStyle}" Text="Név"/>
+                        <Entry 
+                            Style="{StaticResource EntryStyle}" 
+                            Text="{Binding RegisterUser.Name}"
+                            Keyboard="Default" Placeholder="Teljes név"/>
+                        <Label IsVisible="False" Style="{StaticResource ValidationErrorLabelStyle}"/>
+                    </StackLayout>
+                    <!--Age,Weight Fields-->
+                    <Grid
+                        Padding="1"
+                        Margin="5"
+                        RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" Text="Kor" Style="{StaticResource HeaderLabelStyle}"/>
+                        <Entry Grid.Column="0" Grid.Row="1" 
+                               Text="{Binding RegisterUser.Age}"
+                               Placeholder="-" Keyboard="Numeric">
+                            <Entry.Behaviors>
+                                <behavior:NumberValidationBehavior/>
+                            </Entry.Behaviors>
+                        </Entry>
+                        <Label Grid.Column="1" Grid.Row="0" Text="Testsúly" Style="{StaticResource HeaderLabelStyle}"/>
+                        <Entry Grid.Column="1" Grid.Row="1"
+                               Text="{Binding RegisterUser.Weigth}"
+                               Placeholder="-" Keyboard="Numeric">
+                            <Entry.Behaviors>
+                                <behavior:NumberValidationBehavior/>
+                            </Entry.Behaviors>
+                        </Entry>
+                    </Grid>
+                    <Button Style="{StaticResource LoginButtonStyleTwo}" Text="Regisztráció" Command="{Binding RegisterCommand}">
+                        <Button.BorderRadius>
+                            <OnPlatform
+                            x:TypeArguments="x:Int32"
+                            Android="20"
+                            WinPhone="30"/>
+                        </Button.BorderRadius>
+                        <Button.BorderWidth>
+                            <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="14"
+                            WinPhone="2"/>
+                        </Button.BorderWidth>
+                    </Button>
+                </StackLayout>
+                 <!--INDICATOR--> 
+                <ActivityIndicator      
+                Color="{StaticResource LightGreenColor}"
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                    <ActivityIndicator.WidthRequest>
+                        <OnPlatform 
+                        x:TypeArguments="x:Double"
+                        Android="100"
+                        WinPhone="400"/>
+                    </ActivityIndicator.WidthRequest>
+                </ActivityIndicator>
+            </StackLayout>
+        </Grid>
+    </p:BasePage.Content>
+</p:BasePage>

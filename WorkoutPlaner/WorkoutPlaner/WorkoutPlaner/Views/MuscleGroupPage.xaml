@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<p:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:p="clr-namespace:WorkoutPlaner.Views"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:template="clr-namespace:WorkoutPlaner.Views.Templates"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Name="page"
+             x:Class="WorkoutPlaner.Views.MuscleGroupPage">
+    <Grid x:Name="StackContent" HorizontalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!-- INDICATOR -->
+        <ActivityIndicator      
+            Margin="20"
+                Color="{StaticResource LightGreenColor}"
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+            <ActivityIndicator.WidthRequest>
+                <OnPlatform 
+                        x:TypeArguments="x:Double"
+                        Android="100"
+                        WinPhone="400"/>
+            </ActivityIndicator.WidthRequest>
+        </ActivityIndicator>
+    </Grid>
+    <!--<ListView ItemsSource="{Binding ModelPairs}" 
+              x:Name="MSList"
+              HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*" />
+                            <ColumnDefinition Width="50*" />
+                        </Grid.ColumnDefinitions>
+
+                         Left column - BindingContext set to ModelPair.Item1  
+                        <template:MuscleGroupTemplate Grid.Column="0"
+                                              BindingContext="{Binding Item1}">
+                            <template:MuscleGroupTemplate.GestureRecognizers>
+                                <TapGestureRecognizer>
+                                    <TapGestureRecognizer
+                                        Command="{Binding Path=BindingContext.EmptyCommand, Source={x:Reference page}}"
+                                        NumberOfTapsRequired="1"/>
+                                </TapGestureRecognizer>
+                            </template:MuscleGroupTemplate.GestureRecognizers>
+                        </template:MuscleGroupTemplate>
+
+                         Right column - BindingContext set to ModelPair.Item2 
+                        <template:MuscleGroupTemplate Grid.Column="1"
+                                              BindingContext="{Binding Item2}">
+
+                             Don't show right column for "empty/invalid" models 
+                            <template:MuscleGroupTemplate.Triggers>
+                                <DataTrigger TargetType="template:MuscleGroupTemplate"
+                                             Binding="{Binding Name}"
+                                             Value="">
+                                    <Setter Property="IsVisible" Value="False"/>
+                                </DataTrigger>
+                            </template:MuscleGroupTemplate.Triggers>
+                            <template:MuscleGroupTemplate.GestureRecognizers>
+                                <TapGestureRecognizer>
+                                    <TapGestureRecognizer
+                                        Command="{Binding Path=BindingContext.EmptyCommand, Source={x:Reference Name=page}}"
+                                        NumberOfTapsRequired="1"/>
+                                </TapGestureRecognizer>
+                            </template:MuscleGroupTemplate.GestureRecognizers>
+                        </template:MuscleGroupTemplate>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>-->
+</p:BasePage>

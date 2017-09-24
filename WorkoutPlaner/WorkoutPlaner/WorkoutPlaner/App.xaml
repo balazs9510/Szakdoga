@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
+                        xmlns:converters="clr-namespace:WorkoutPlaner.Converters;assembly=WorkoutPlaner"
+                        x:Class="WorkoutPlaner.App">
+
+  <prism:PrismApplication.Resources>
+    <ResourceDictionary>
+      <!-- Fonts -->
+      <OnPlatform
+         x:Key="Palermo"
+         x:TypeArguments="x:String"
+         Android="Palermo-Bold.ttf#Palermo"
+         WinPhone="Assets/Fonts/Palermo-Bold.ttf#Palermo"/>
+
+      <!-- COLORS -->
+      <Color x:Key="WhiteColor">#ffffff</Color>
+      <Color x:Key="BlackColor">#000000</Color>
+      <Color x:Key="BackgroundColor">#F4F6FA</Color>
+      <Color x:Key="AccentColor">#00857D</Color>
+      <Color x:Key="LightGreenColor">#83D01B</Color>
+      <Color x:Key="GreenColor">#00A69C</Color>
+      <Color x:Key="DarkGreenColor">#188500</Color>
+      <Color x:Key="DarkBlueGreenColor">#00857D</Color>
+      <Color x:Key="GrayColor">#e2e2e2</Color>
+      <Color x:Key="ErrorColor">#ff5252</Color>
+      <Color x:Key="MildBlueColor">#2b8bd4</Color>
+
+      <!-- STYLES -->
+      <Style x:Key="ValidationErrorLabelStyle"
+             TargetType="{x:Type Label}">
+        <Setter Property="TextColor"
+            Value="{StaticResource ErrorColor}" />
+        <Setter Property="FontSize"
+              Value="Small" />
+      </Style>
+
+      <Style x:Key="DefaultLabelStyle"
+             TargetType="{x:Type Label}">
+        <Setter Property="TextColor" Value="{StaticResource BlackColor}"/>
+        <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="VerticalOptions" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+      </Style>
+      <Style x:Key="DefaultLabelStyleWinPhone"
+             TargetType="{x:Type Label}">
+        <Setter Property="TextColor" Value="{StaticResource BlackColor}"/>
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="VerticalOptions" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+      </Style>
+
+      <Style x:Key="EntryStyle"
+             TargetType="{x:Type Entry}">
+        <Setter Property="Keyboard"
+                Value="Default"/>
+        <Setter Property="TextColor"
+                Value="{StaticResource BlackColor}" />
+        <Setter Property="PlaceholderColor"
+                Value="{StaticResource BlackColor}" />
+        <Setter Property="HorizontalOptions"
+                Value="Fill" />
+        <Setter Property="FontAttributes"
+                Value="Bold" />
+        <Setter Property="BackgroundColor"
+                        Value="Transparent" />
+        <Setter Property="Opacity"
+                Value="0.6" />
+        <Style.Triggers>
+          <Trigger TargetType="Entry"
+                   Property="IsFocused"
+                   Value="True">
+            <Setter Property="Opacity" Value="1" />
+          </Trigger>
+        </Style.Triggers>
+      </Style>
+
+      <Style TargetType="NavigationPage">
+        <Setter Property="BarBackgroundColor" Value="{StaticResource GreenColor}"/>
+        <Setter Property="BarTextColor" Value="{StaticResource WhiteColor}"/>
+      </Style>
+      
+      <converters:DateTimeToStringConverter x:Key="DateTimeToStringConverter"/>
+      <converters:TimeSpanToBoolConverter x:Key="TimeSpanToBoolConverter"/>
+      <converters:TimeSpanToStringConverter x:Key="TimeSpanToStringConverter"/>
+      <converters:StrintToImageSourceConverter x:Key="StrintToImageSourceConverter"/>
+      <converters:TextChangedEventArgsConverter x:Key="TextChangedEventArgsConverter"/>
+      <converters:InverseIntToBoolConverter x:Key="InverseIntToBoolConverter"/>
+      <converters:IntToBoolConverter x:Key="IntToBoolConverter"/>
+      <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+      <converters:InverseBoolToColorConverter x:Key="InverseBoolToColorConverter"/>
+      <converters:BoolToColorConverter x:Key="BoolToColorConverter"/>
+      <converters:ErrorListToStringConverter x:Key="ErrorListToStringConverter"/>
+      <converters:StringToUpperCaseConverter x:Key="StringToUpperCaseConverter"/>
+      <converters:DifficultyToImageSourceConverter x:Key="DifficultyToImageSourceConverter"/>
+      <converters:TranslateConverter x:Key="TranslateConverter"/>
+    </ResourceDictionary>
+  </prism:PrismApplication.Resources>
+</prism:PrismApplication>

@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddedExercises" xml:space="preserve">
+    <value>Felvett gyakorlatok</value>
+  </data>
+  <data name="AddExercises" xml:space="preserve">
+    <value>Gyakorlatok hozzáadása</value>
+  </data>
+  <data name="AddWorkout" xml:space="preserve">
+    <value>Új edzés hozzáadása</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Hát</value>
+  </data>
+  <data name="Chest" xml:space="preserve">
+    <value>Mell</value>
+  </data>
+  <data name="CreateNewWorkout" xml:space="preserve">
+    <value>Új edzésterv létrehozása</value>
+  </data>
+  <data name="Difficulty" xml:space="preserve">
+    <value>Nehézség</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmailPlaceHolder" xml:space="preserve">
+    <value>pelda@gmail.com</value>
+  </data>
+  <data name="Legs" xml:space="preserve">
+    <value>Láb</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Bejelentkezés</value>
+  </data>
+  <data name="NoWorkoutAdded" xml:space="preserve">
+    <value>Jelenleg egy edzés sem elérhető.</value>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>Offline mód</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Jelszó</value>
+  </data>
+  <data name="PasswordAgain" xml:space="preserve">
+    <value>Ellenörző jelszó</value>
+  </data>
+  <data name="PasswordPlaceHolder" xml:space="preserve">
+    <value>ValaMiN@12</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Regisztráció</value>
+  </data>
+  <data name="Reps" xml:space="preserve">
+    <value>Ismétlés szám</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Mentés</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Keresés</value>
+  </data>
+  <data name="SerialNumber" xml:space="preserve">
+    <value>Sorozatszám</value>
+  </data>
+  <data name="Teszt" xml:space="preserve">
+    <value>ASDD</value>
+  </data>
+  <data name="WorkoutName" xml:space="preserve">
+    <value>Edzés neve</value>
+  </data>
+  <data name="WorkoutNamePlaceHolder" xml:space="preserve">
+    <value>Kemény edzés</value>
+  </data>
+  <data name="NoItem" xml:space="preserve">
+    <value>Nincs egy elem se a listában.</value>
+  </data>
+  <data name="ChooseDate" xml:space="preserve">
+    <value>Kérlek add meg a dátumot!</value>
+  </data>
+  <data name="SaveToCalendar" xml:space="preserve">
+    <value>Mentés a naptárba</value>
+  </data>
+  <data name="StartNewWorkout" xml:space="preserve">
+    <value>Kezd el most!</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Időpont</value>
+  </data>
+  <data name="SureDelete" xml:space="preserve">
+    <value>Biztos törli?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Mégse</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Oké</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Szünet</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Állj!</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Indít</value>
+  </data>
+  <data name="Congrats" xml:space="preserve">
+    <value>Gratulálok, teljesítetted az edzést!</value>
+  </data>
+  <data name="StopMessage" xml:space="preserve">
+    <value>Ha megállítja az edzést, azzal törlődik az eredmény.</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Figyelmeztetés!</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>hét</value>
+  </data>
+  <data name="CompleteTime" xml:space="preserve">
+    <value>Teljesítési idő</value>
+  </data>
+  <data name="NoCam" xml:space="preserve">
+    <value>Nincs kamera</value>
+  </data>
+  <data name="NoCamerAvailable" xml:space="preserve">
+    <value>Nem elérhető a kamera.</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Hiba</value>
+  </data>
+  <data name="FilePlace" xml:space="preserve">
+    <value>Fájl helye:</value>
+  </data>
+  <data name="SaveFileError" xml:space="preserve">
+    <value>Valami hiba történt a fájl mentése során.</value>
+  </data>
+  <data name="AutSync" xml:space="preserve">
+    <value>Automatikus szinkronizáció bekapcsolása</value>
+  </data>
+  <data name="LastSuccesfulSync" xml:space="preserve">
+    <value>Utolsó sikeres szinkronizáció időpontja</value>
+  </data>
+  <data name="NoInternet" xml:space="preserve">
+    <value>Nem elérhető az internet.</value>
+  </data>
+  <data name="ConnectionError" xml:space="preserve">
+    <value>Hiba a hálózati kapcsolat során.</value>
+  </data>
+  <data name="Alkar" xml:space="preserve">
+    <value>Alkar</value>
+  </data>
+  <data name="Bicepsz" xml:space="preserve">
+    <value>Bicepsz</value>
+  </data>
+  <data name="Combizom" xml:space="preserve">
+    <value>Combizom</value>
+  </data>
+  <data name="Hasizom" xml:space="preserve">
+    <value>Hasizom</value>
+  </data>
+  <data name="Hátizom" xml:space="preserve">
+    <value>Hátizom</value>
+  </data>
+  <data name="Mellizom" xml:space="preserve">
+    <value>Mellizom</value>
+  </data>
+  <data name="Tricepsz" xml:space="preserve">
+    <value>Tricepsz</value>
+  </data>
+  <data name="Törzsizomzat" xml:space="preserve">
+    <value>Törzsizomzat</value>
+  </data>
+  <data name="Vádli" xml:space="preserve">
+    <value>Vádli</value>
+  </data>
+  <data name="Vállizom" xml:space="preserve">
+    <value>Vállizom</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Kérlek válassz!</value>
+  </data>
+  <data name="LastLogin" xml:space="preserve">
+    <value>Utolsó bejelentkezés</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Tovább</value>
+  </data>
+  <data name="NoUserMessage" xml:space="preserve">
+    <value>Még egyetlen felhasználó se jelentkezett be az alkalmazásba.</value>
+  </data>
+  <data name="NoUserTitle" xml:space="preserve">
+    <value>Nincs felhasználó</value>
+  </data>
+  <data name="SuccessLogout" xml:space="preserve">
+    <value>Sikeres kijelentkezés.</value>
+  </data>
+  <data name="SuccessDelete" xml:space="preserve">
+    <value>Sikeres törlés.</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Üzenet</value>
+  </data>
+  <data name="SuccesfullSync" xml:space="preserve">
+    <value>Sikeres szinkronizáció.</value>
+  </data>
+  <data name="SyncTitle" xml:space="preserve">
+    <value>Szinkronizációs statisztika</value>
+  </data>
+  <data name="NotDeleteableWorkout" xml:space="preserve">
+    <value>Az elem nem törölhető, mert másik elem kapcsolódik hozzá.</value>
+  </data>
+</root>
